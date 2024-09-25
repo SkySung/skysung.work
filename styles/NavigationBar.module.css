@@ -1,0 +1,45 @@
+/* styles/NavigationBar.module.css */
+
+.sidebar {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebarHeader {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+  }
+  
+  .toggleButton {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .navigation h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .navigation ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .navigation li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .navigation a {
+    color: #0070f3;
+    text-decoration: none;
+  }
+  
+  .navigation a:hover {
+    text-decoration: underline;
+  }
+  
