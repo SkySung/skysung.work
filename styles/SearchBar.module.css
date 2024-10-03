@@ -1,0 +1,27 @@
+/* styles/SearchBar.module.css */
+.searchBar {
+    display: flex;
+    align-items: center;
+    margin :0px 20px;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 1rem;
+  }
+  
+  .searchButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-left: 8px;
+    display: flex;
+    align-items: center;
+  }
+  

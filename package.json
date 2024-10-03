@@ -9,14 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mdx-js/react": "^3.0.1",
+    "feather-icons": "^4.29.2",
+    "framer-motion": "^11.7.0",
     "gray-matter": "^4.0.3",
     "next": "14.2.13",
+    "next-mdx-remote": "^5.0.0",
+    "next-themes": "^0.3.0",
     "react": "^18",
-    "react-dom": "^18",
-    "remark": "^15.0.1",
-    "remark-html": "^16.0.1"
+    "react-dom": "^18"
   },
   "devDependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@next/mdx": "^14.2.13",
     "autoprefixer": "^10.4.20",
     "eslint": "^8",
     "eslint-config-next": "14.2.13",

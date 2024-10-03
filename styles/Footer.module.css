@@ -1,0 +1,10 @@
+/* styles/Footer.module.css */
+.footer {
+  padding: 20px;
+  text-align: center;
+  bottom: 0;
+}
+
+.footer p {
+  margin: 0;
+}

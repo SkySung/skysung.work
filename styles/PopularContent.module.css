@@ -1,0 +1,37 @@
+/* styles/PopularContent.module.css */
+.popularContent {
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 8px;
+  }
+  
+  .popularContent h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .postList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .postItem {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 1rem;
+    border-bottom: 1px solid #eaeaea;
+    cursor: pointer;
+  }
+  
+  .postItem:hover {
+    color: var(--link-hover);
+  }
+
+
+  
+  .icon {
+    margin-right: 8px;
+  }
+  

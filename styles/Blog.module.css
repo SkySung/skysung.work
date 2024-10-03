@@ -1,47 +1,31 @@
 /* styles/Blog.module.css */
-
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 主內容與側邊欄比例 */
+  gap: 20px;
+  padding: 20px 5%;
+  margin-bottom: 40px; /* 給 Footer 留下空間 */
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* 當寬度不足時，隱藏側邊元件 */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
   }
-  
-  .title {
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-    color: #333;
+  .container {
+    padding: 20px 3%;
   }
-  
-  .posts {
-    width: 66.6667%; /* 2/3 寬度 */
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .post {
-    padding: 1.5rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-  }
-  
-  .post:hover {
-    transform: translateY(-5px);
-  }
-  
-  .post h2 {
-    margin-bottom: 0.5rem;
-    color: #0070f3;
-  }
-  
-  .post p {
-    color: #666;
-  }
-  
-  .post a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
+}

@@ -1,45 +1,98 @@
 /* styles/NavigationBar.module.css */
 
-.sidebar {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.header {
+  position: fixed; /* 固定在視窗頂部 */
+  top: 0;
+  left: 0;
+  width: 100%; /* 讓 Navbar 填滿寬度 */
+  z-index: 1000; /* 確保在其他元素之上 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(10px); /* 毛玻璃效果 */
+  -webkit-backdrop-filter: blur(10px); /* Safari 支援 */
+  color: var(--header-text);
+  transition: background-color 0.3s, color 0.3s, backdrop-filter 0.3s;
+}
+
+.logo a {
+  color: var(--logo-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navList li {
+  margin: 0 1rem;
+}
+
+.navList a {
+  color: var(--nav-link-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navList a:hover {
+  color: var(--nav-link-hover);
+  text-decoration: underline;
+}
+
+.icons {
+  display: flex;
+}
+
+.iconButton {
+  color: var(--icon-button-color);
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-left: 20px;
+}
+
+.iconButton::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.iconButton svg {
+  width: 24px;
+  height: 24px;
+  pointer-events: all;
+  transition: color 0.3s;
+}
+
+.iconButton svg:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
   }
-  
-  .sidebarHeader {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 1rem;
+
+  .icons {
+    display: none;
   }
-  
-  .toggleButton {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-  
-  .navigation h3 {
-    margin-bottom: 0.5rem;
-    color: #333;
-  }
-  
-  .navigation ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .navigation li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .navigation a {
-    color: #0070f3;
-    text-decoration: none;
-  }
-  
-  .navigation a:hover {
-    text-decoration: underline;
-  }
-  
+}

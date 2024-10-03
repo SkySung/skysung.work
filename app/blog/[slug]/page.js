@@ -1,39 +1,17 @@
 // app/blog/[slug]/page.js
+import { getPostBySlug } from '@/lib/posts';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 
-import { getPostBySlug, getAllPosts } from '../../../lib/posts';
-import styles from '../../../styles/Post.module.css';
-import Link from 'next/link';
-
-export async function generateStaticParams() {
-  const posts = getAllPosts();
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
-
-export async function generateMetadata({ params }) {
-  const post = await getPostBySlug(params.slug);
-  return {
-    title: `${post.title} | Skysung Blog`,
-    description: post.excerpt,
-  };
-}
-
-export default async function Post({ params }) {
+export default async function BlogPost({ params }) {
   const post = await getPostBySlug(params.slug);
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>{post.title}</h1>
-      <article
-        className={styles.content}
-        dangerouslySetInnerHTML={{ __html: post.content }}
-      ></article>
-      <div className={styles.back}>
-        <Link href="/blog">
-          <a>← 返回博客首頁</a>
-        </Link>
+    <article className="max-w-2xl mx-auto">
+      <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
+      <p className="text-gray-600 mb-8">{post.date}</p>
+      <div className="prose prose-lg">
+        <MDXRemote source={post.content} />
       </div>
-    </div>
+    </article>
   );
 }

@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
+    "baseUrl": ".", // 設置基礎路徑為專案根目錄
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"], // 通用別名，指向專案根目錄
+      "@/components/*": ["components/*"], // 指向 components 目錄
+      "@/lib/*": ["lib/*"], // 指向 lib 目錄
+      "@/styles/*": ["styles/*"], // 指向 styles 目錄
+      "@/posts/*": ["posts/*"] // 指向 posts 目錄
     }
   }
 }

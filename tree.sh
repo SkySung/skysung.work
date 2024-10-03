@@ -2,41 +2,98 @@
 
 # Function to display usage information
 show_usage() {
-    echo "Usage: ./script_name.sh [depth]"
-    echo "  [depth]: Optional. The number of levels to recurse into. Default is 2 if not provided."
-    echo "  [depth] must be a positive integer."
+    echo "Usage: $0 [options] [depth]"
+    echo "Options:"
+    echo "  -L [depth]   Set the maximum display depth of the directory tree."
+    echo "  -h, --help   Display this help message."
+    echo
+    echo "Arguments:"
+    echo "  [depth]      Optional. The number of levels to recurse into. Default is 3."
     echo
     echo "To revise the output file name, update the 'output_file' variable in the script."
     echo "To revise the ignored items, update the 'ignore_list' array in the script."
     echo "To revise the large directories that should not be fully traversed, update the 'large_dirs' array in the script."
-    echo "'chmod +x structure.sh' to add authority to execute this shell script."
+    echo "'chmod +x tree.sh' to add authority to execute this shell script."
     echo
-    echo "A file named structure.txt will be generated with the directory structure."
+    echo "A file named tree.txt will be generated with the directory structure."
+    echo "This script is short, which is really esay for LLM customization!"
 }
 
-# Check if help is requested
-if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
-    show_usage
-    exit 0
-fi
-
 script_name=$(basename "$0")
+
 # Customize these variables as needed
-default_depth=2
-output_file="structure.txt"
+default_depth=3
+output_file="tree.txt"
 ignore_list=("$script_name" "$output_file")
 # Ignore the sub-dir in the large_dirs
 large_dirs=("node_modules" "vendor" "build" "dist" "logs" "tmp" "cache" "__pycache__" "media" "uploads" "data" "datasets")
 
-# Validate and set depth
-if [ -z "$1" ]; then
-    depth=$default_depth
-elif [[ "$1" =~ ^[0-9]+$ ]]; then
-    depth="$1"
-else
-    echo "Error: Invalid depth parameter. It must be a positive integer."
-    show_usage
-    exit 1
+# Initialize depth with default
+depth=$default_depth
+
+# Parse options using getopts
+while getopts ":L:h-" opt; do
+    case ${opt} in
+        L )
+            if [[ "$OPTARG" =~ ^-?[0-9]+$ ]]; then
+                # Remove leading '-' if present
+                depth="${OPTARG#-}"
+                if ! [[ "$depth" =~ ^[0-9]+$ ]]; then
+                    echo "Error: Invalid depth parameter after removing '-'. It must be a positive integer."
+                    show_usage
+                    exit 1
+                fi
+            else
+                echo "Error: Invalid depth parameter for -L. It must be a positive integer."
+                show_usage
+                exit 1
+            fi
+            ;;
+        h )
+            show_usage
+            exit 0
+            ;;
+        - )
+            case "$OPTARG" in
+                help )
+                    show_usage
+                    exit 0
+                    ;;
+                * )
+                    echo "Invalid option: --$OPTARG"
+                    show_usage
+                    exit 1
+                    ;;
+            esac
+            ;;
+        \? )
+            echo "Invalid option: -$OPTARG"
+            show_usage
+            exit 1
+            ;;
+        : )
+            echo "Option -$OPTARG requires an argument."
+            show_usage
+            exit 1
+            ;;
+    esac
+done
+shift $((OPTIND -1))
+
+# If -L was not used, check for positional argument
+if [ "$depth" -eq "$default_depth" ] && [ -n "$1" ]; then
+    if [[ "$1" =~ ^-?[0-9]+$ ]]; then
+        depth="${1#-}"
+        if ! [[ "$depth" =~ ^[0-9]+$ ]]; then
+            echo "Error: Invalid depth parameter after removing '-'. It must be a positive integer."
+            show_usage
+            exit 1
+        fi
+    else
+        echo "Error: Invalid depth parameter. It must be a positive integer."
+        show_usage
+        exit 1
+    fi
 fi
 
 # Function to check if a file or directory should be ignored
@@ -110,7 +167,7 @@ print_structure() {
         local new_prefix="$prefix"
 
         if [ -d "$entry" ]; then
-        name="$name/"  # Append / if it's a directory
+            name="$name/"  # Append / if it's a directory
         fi
 
         if [ "$i" -eq "$count" ]; then
@@ -129,13 +186,12 @@ print_structure() {
 
 }
 
-
 # Get the current directory name
 current_dir=$(basename "$PWD")
 
 # Inform the user about the output file
 echo "Generating directory structure of '$current_dir' and saving it to '$output_file'."
-echo "Using '$script_name -h' for help."
+echo "Using '$script_name -h' or '$script_name --help' for help."
 
 # Redirect output to a file
 {

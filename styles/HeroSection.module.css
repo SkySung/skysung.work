@@ -1,0 +1,39 @@
+/* styles/HeroSection.module.css */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 55vh;
+  background-color: var(--cloud-background) !important;
+  overflow: hidden;
+}
+
+.virtualCharacter {
+  position: absolute; 
+  width: 250px;
+  height: auto;
+  right: 0;
+  bottom: 0;
+  margin-right: 5%;
+  z-index: 1;
+}
+
+@media (max-width: 768px) and (min-width: 456px) {
+  .container {
+    height: 40vh;
+  }
+
+  .virtualCharacter {
+    display: none;
+  }
+}
+
+@media (max-width: 455px) {
+  .container {
+    height: 30vh;
+  }
+  .virtualCharacter {
+    display: none;
+  }
+}

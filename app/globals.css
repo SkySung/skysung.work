@@ -1,25 +1,53 @@
 /* app/globals.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* 定義默認（亮色模式）變量 */
+:root {
+  --background: #ffffff;
+  --header-bg: #rgba(255, 255, 255, 0.8); /* 半透明背景 */
+  --header-text: #0d0f12;
+  --logo-color: #0d0f12;
+  --nav-link-color: #0d0f12;
+  --nav-link-hover: #555555;
+  --link-hover: #7ac8ff;
+  --icon-button-color: #0d0f12;
+  --footer-bg: #ffffff;
+  --footer-text: #0d0f12;
 
-html,
+  /* Cloud colors for light mode */
+  --cloud-background: hsl(199.02deg 69.49% 76.86%);
+  --color-cloud-300: hsl(202deg 68% 92%);
+  --color-cloud-500: hsl(200deg 80% 83%);
+}
+
+/* 定義暗黑模式下的變量 */
+[data-theme="dark"] {
+  --background: #0d0f12;
+  --header-bg: #rgba(0, 0, 0, 0.8); /* 半透明背景 */ /* 深灰色背景 */
+  --header-text: #ffffff; /* 白色文字 */
+  --logo-color: #ffffff;
+  --nav-link-color: #ffffff;
+  --nav-link-hover: #dddddd;
+  --link-hover: #7ac8ff;
+  --icon-button-color: #ffffff;
+  --footer-bg: #1f2937;
+  --footer-text: #ffffff;
+
+  /* Cloud colors for dark mode */
+  --cloud-background: linear-gradient(to bottom, hsl(214, 67%, 40%), hsl(213, 50%, 51%));
+  --color-cloud-300: hsl(212deg 40% 9%);
+  --color-cloud-500: hsl(213deg 40% 12%);
+}
+
+/* 應用變量 */
 body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #f0f2f5;
-  color: #333;
+  background-color: var(--background);
+  color: var(--header-text);
+  transition: background-color 0.3s, color 0.3s;
 }
 
-a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-* {
-  box-sizing: border-box;
+input {
+  transition: background-color 0.3s, color 0.3s;
 }

@@ -1,0 +1,23 @@
+// app/blog/example-post.mdx
+export const metadata = {
+  title: 'My First Blog Post',
+  date: '2023-05-20',
+}
+
+# My Second Blog Post
+
+This is an example of a blog post written in MDX. You can use **Markdown** syntax here.
+
+You can also use React components:
+
+import SomeComponent from '@/components/SomeComponent'
+
+<SomeComponent />
+
+## Code Blocks
+
+```javascript
+console.log('Hello, MDX!');
+```
+
+export default ({ children }) => <>{children}</>
