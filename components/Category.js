@@ -1,40 +1,27 @@
-"use client";
 // components/Category.js
-import React, { useState } from "react";
+import React from "react";
+import Link from "next/link";
 import styles from "@/styles/Category.module.css";
+import { getAllTags } from "@/lib/posts";
 
-const categories = [
-  "JavaScript",
-  "SoftSkill",
-  "React",
-  "Books",
-  "Podcast",
-  "Random",
-  "BlockChain",
-];
-
-export default function Category({ onSelectCategory }) {
-  const [selectedCategory, setSelectedCategory] = useState(null);
-
-  const handleCategoryClick = (category) => {
-    setSelectedCategory(category);
-    onSelectCategory(category);
-  };
+export default async function Category() {
+  const categories = getAllTags();
 
   return (
     <div className={styles.category}>
       <h2>Category</h2>
       <div className={styles.categoryList}>
+        <Link href="/blog" className={`${styles.categoryItem}`}>
+          all
+        </Link>
         {categories.map((category) => (
-          <button
+          <Link
             key={category}
-            onClick={() => handleCategoryClick(category)}
-            className={`${styles.categoryItem} ${
-              selectedCategory === category ? styles.active : ""
-            }`}
+            href={`/category/${encodeURIComponent(category)}`}
+            className={styles.categoryItem}
           >
             {category}
-          </button>
+          </Link>
         ))}
       </div>
     </div>
