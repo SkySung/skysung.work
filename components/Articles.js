@@ -20,6 +20,7 @@ export default function BlogIndex() {
               <h2 className="text-xl font-semibold mb-2 hover:underline">
                 {post.title}
               </h2>
+              <p className="text-gray-600">{post.description}</p>
               <p className="text-gray-600">{post.date}</p>
             </Link>
           </li>
