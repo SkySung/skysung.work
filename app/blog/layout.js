@@ -22,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <>
-      <NavigationBar />  {/* 把 NavigationBar 放在最頂部 */}
+      <NavigationBar /> 
       <HeroSection />
       <div className={styles.container}>
         <div className={styles.mainContent}>

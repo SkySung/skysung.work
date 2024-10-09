@@ -6,7 +6,7 @@ import Cloud from '@/components/Cloud'; // 使用你現有的雲朵組件
 
 const HeroSection = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.heroContainer}>
       <Cloud />
       <Image
         src={avatar}

@@ -1,12 +1,18 @@
 /* styles/HeroSection.module.css */
-.container {
+.heroContainer {
+  margin: 0;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 55vh;
-  background-color: var(--cloud-background) !important;
+  height: 60vh;
   overflow: hidden;
+  z-index: -1;
+}
+
+.heroContainer svg {
+  height: inherit;
 }
 
 .virtualCharacter {
@@ -20,7 +26,7 @@
 }
 
 @media (max-width: 768px) and (min-width: 456px) {
-  .container {
+  .heroContainer {
     height: 40vh;
   }
 
@@ -30,7 +36,7 @@
 }
 
 @media (max-width: 455px) {
-  .container {
+  .heroContainer {
     height: 30vh;
   }
   .virtualCharacter {

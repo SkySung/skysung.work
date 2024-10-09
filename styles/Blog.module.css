@@ -5,7 +5,9 @@
   grid-template-columns: 2fr 1fr; /* 主內容與側邊欄比例 */
   gap: 20px;
   padding: 20px 5%;
-  margin-bottom: 40px; /* 給 Footer 留下空間 */
+  padding-bottom: 40px;
+  background-color: var(--background);
+  transition: background-color 0.5s ease-in-out;
 }
 
 .mainContent {

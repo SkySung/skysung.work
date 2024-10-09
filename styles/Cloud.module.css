@@ -1,1 +1,6 @@
 /* styles/Cloud.module.css */
+.cloud {
+    position: absolute;
+    overflow: hidden;
+    height: auto;
+}

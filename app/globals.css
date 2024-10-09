@@ -15,6 +15,7 @@
   --icon-button-color: #0d0f12;
   --footer-bg: #ffffff;
   --footer-text: #0d0f12;
+  --text-color: #0d0f12;
 
   /* Cloud colors for light mode */
   --cloud-background: hsl(199.02deg 69.49% 76.86%);
@@ -36,18 +37,28 @@
   --footer-text: #ffffff;
 
   /* Cloud colors for dark mode */
-  --cloud-background: linear-gradient(to bottom, hsl(214, 67%, 40%), hsl(213, 50%, 51%));
+  --cloud-background: linear-gradient(to bottom, hsl(214, 87%, 40%), hsl(213, 100%, 14%));
   --color-cloud-300: hsl(212deg 40% 9%);
   --color-cloud-500: hsl(213deg 40% 12%);
+  transition: background-color 0.5s ease-in-out;
 }
 
-/* 應用變量 */
+
 body {
-  background-color: var(--background);
-  color: var(--header-text);
-  transition: background-color 0.3s, color 0.3s;
+  transition: color 0.5s ease-in-out;
 }
 
-input {
-  transition: background-color 0.3s, color 0.3s;
+body svg path {
+  transition: fill 0.5s ease-in-out;
+}
+body svg rect {
+  transition: fill 0.5s ease-in-out;
+} 
+
+body input {
+  transition: background-color 0.5s ease-in-out;
+}
+
+body footer {
+  transition: background-color 0.5s ease-in-out;
 }

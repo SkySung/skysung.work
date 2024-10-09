@@ -9,7 +9,6 @@
     padding: 20px;
     border: 1px solid #eaeaea;
     border-radius: 10px;
-    transition: box-shadow 0.2s;
   }
   
   .article:hover {
