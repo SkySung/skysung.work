@@ -1,18 +1,16 @@
-/* styles/NavigationBar.module.css */
-
 .header {
-  position: fixed; /* 固定在視窗頂部 */
+  position: fixed; /* 固定在视窗顶部 */
   top: 0;
   left: 0;
-  width: 100%; /* 讓 Navbar 填滿寬度 */
-  z-index: 1000; /* 確保在其他元素之上 */
+  width: 100%; /* 让 Navbar 填满宽度 */
+  z-index: 1000; /* 确保在其他元素之上 */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
   background-color: var(--header-bg);
   backdrop-filter: blur(10px); /* 毛玻璃效果 */
-  -webkit-backdrop-filter: blur(10px); /* Safari 支援 */
+  -webkit-backdrop-filter: blur(10px); /* Safari 支持 */
   color: var(--header-text);
 }
 
@@ -53,50 +51,44 @@
 
 .icons {
   display: flex;
+  align-items: center;
 }
 
 .iconButton {
   color: var(--icon-button-color);
-  position: relative;
   background: none;
   border: none;
   cursor: pointer;
-  padding-left: 20px;
-}
-
-.iconButton::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  bottom: -10px;
-  left: -10px;
-  right: -10px;
-  background-color: transparent;
-  pointer-events: none;
+  margin-left: 1rem;
 }
 
 .iconButton svg {
   width: 24px;
   height: 24px;
-  pointer-events: all;
-}
-
-.iconButton svg:focus {
-  outline: none;
-}
-.menuButton {
-  display: none;
 }
 
 @media (max-width: 768px) {
   .nav {
     display: none;
-  }
-  .menuButton {
-    display: block;
+    position: absolute;
+    top: 100%; /* 将菜单放在导航栏下方 */
+    left: 0;
+    width: 100%;
+    background-color: var(--header-bg);
+    flex-direction: column;
+    align-items: center;
   }
 
-  .icons {
-    display: none;
+  .nav.showMenu {
+    display: flex;
+  }
+
+  .navList {
+    flex-direction: column;
+    border-bottom: 1px solid var(--header-text);
+  }
+
+  .navList li {
+    margin: 1rem 0;
   }
 }

@@ -1,9 +1,9 @@
 /* styles/Footer.module.css */
 .footer {
+  width: 100%;
   margin: 0;
   padding: 20px;
   text-align: center;
-  bottom: 0;
   background-color: var(--footer-bg);
   color: var(--footer-text);
 }

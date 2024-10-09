@@ -15,12 +15,6 @@ const NavigationBar = () => {
       <div className={styles.logo}>
         <Link href="/">Sky Sung</Link>
       </div>
-      <button
-        className={styles.menuButton}
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-      >
-        <IconMenu />
-      </button>
       <nav className={`${styles.nav} ${isMenuOpen ? styles.showMenu : ''}`}>
         <ul className={styles.navList}>
           <li><Link href="/blog">Blog</Link></li>
@@ -33,6 +27,12 @@ const NavigationBar = () => {
         <button className={styles.iconButton}><IconSearch /></button>
         <button className={styles.iconButton}><ThemeToggle /></button>
         <button className={styles.iconButton}><IconRss /></button>
+        <button
+          className={styles.iconButton}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <IconMenu />
+        </button>
       </div>
     </header>
   );

@@ -21,7 +21,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <>
+    <div className={styles.rootLayout}>
       <NavigationBar /> 
       <HeroSection />
       <div className={styles.container}>
@@ -35,6 +35,6 @@ export default function RootLayout({ children }) {
         </aside>
       </div>
       <Footer /> {/* 把 Footer 放在最底部 */}
-    </>
+    </div>
   );
 }

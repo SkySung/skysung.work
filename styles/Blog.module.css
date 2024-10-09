@@ -1,5 +1,11 @@
 /* styles/Blog.module.css */
+.rootLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 .container {
+  flex: 1;
   position: relative;
   display: grid;
   grid-template-columns: 2fr 1fr; /* 主內容與側邊欄比例 */

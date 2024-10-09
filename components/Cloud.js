@@ -6,7 +6,7 @@ const Cloud = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="5120"
       height="456"
-      viewBox="0 -2 5120 456"
+      viewBox="0 -3 5120 456"
       preserveAspectRatio="none"
       className={styles.cloud}
     >

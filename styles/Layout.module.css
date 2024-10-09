@@ -13,11 +13,6 @@
   padding: 2rem;
 }
 
-.footer {
-  text-align: center;
-  padding: 1rem 2rem;
-}
-
 @media (max-width: 768px) {
   .main {
     flex-direction: column;
