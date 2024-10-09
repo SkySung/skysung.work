@@ -5,6 +5,7 @@ import styles from '@/styles/NavigationBar.module.css';
 import IconRss from '@/components/icons/IconRss';
 import IconSearch from '@/components/icons/IconSearch';
 import ThemeToggle from '@/components/icons/ThemeToggle';
+import IconMenu from '@/components/icons/IconMenu';
 
 const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,8 +19,7 @@ const NavigationBar = () => {
         className={styles.menuButton}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
-        {/* 這裡可以用漢堡圖標 */}
-        ☰
+        <IconMenu />
       </button>
       <nav className={`${styles.nav} ${isMenuOpen ? styles.showMenu : ''}`}>
         <ul className={styles.navList}>

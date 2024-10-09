@@ -18,6 +18,8 @@
   --text-color: #0d0f12;
 
   /* Cloud colors for light mode */
+  --color-sky-from:hsl(200deg 70% 78%);
+  --color-sky-to: hsl(200deg 70% 70%);
   --cloud-background: hsl(199.02deg 69.49% 76.86%);
   --color-cloud-300: hsl(202deg 68% 92%);
   --color-cloud-500: hsl(200deg 80% 83%);
@@ -40,7 +42,8 @@
   --cloud-background: linear-gradient(to bottom, hsl(214, 87%, 40%), hsl(213, 100%, 14%));
   --color-cloud-300: hsl(212deg 40% 9%);
   --color-cloud-500: hsl(213deg 40% 12%);
-  transition: background-color 0.5s ease-in-out;
+  --color-sky-from: hsl(214deg 40% 11%);
+  --color-sky-to: hsl(200deg 50% 30%);
 }
 
 
@@ -51,8 +54,8 @@ body {
 body svg path {
   transition: fill 0.5s ease-in-out;
 }
-body svg rect {
-  transition: fill 0.5s ease-in-out;
+body svg defs stop{
+  transition: stop-color 0.5s ease-in-out;
 } 
 
 body input {
