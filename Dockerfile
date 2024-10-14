@@ -36,8 +36,8 @@ COPY --from=builder /app/images ./images
 
 USER nextjs
 
-EXPOSE 8080
+EXPOSE 3000
 
-ENV PORT 8080
+ENV PORT 3000
 
 CMD ["npm", "start"]
