@@ -3,8 +3,11 @@ skysung.work/
 ├── app/
 │   ├── blog/
 │   │   ├── [slug]/
+│   │   ├── about/
 │   │   ├── layout.js
 │   │   └── page.js
+│   ├── category/
+│   │   └── [tag]/
 │   ├── fonts/
 │   │   ├── GeistMonoVF.woff
 │   │   └── GeistVF.woff
@@ -43,12 +46,12 @@ skysung.work/
 │   ├── Cloud.module.css
 │   ├── Footer.module.css
 │   ├── HeroSection.module.css
-│   ├── Home.module.css
 │   ├── Layout.module.css
 │   ├── NavigationBar.module.css
 │   ├── PopularContent.module.css
 │   ├── Post.module.css
 │   └── SearchBar.module.css
+├── Dockerfile
 ├── README.md
 ├── jsconfig.json
 ├── mdx-components.js
