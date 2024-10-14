@@ -34,6 +34,7 @@
     display: none;
   }
   .container {
+    grid-template-columns: 1fr; /* 主內容全寬 */
     padding: 20px 3%;
   }
 }

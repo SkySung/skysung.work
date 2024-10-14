@@ -1,14 +1,37 @@
 /* styles/HeroSection.module.css */
 .heroContainer {
+  transition: height 0.5s ease-in-out;
+}
+
+.heroContainer {
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   position: relative;
   height: 60vh;
   overflow: hidden;
   z-index: -1;
+}
+
+/* 預設高度 */
+.heroHeightDefault {
+  height: 60vh;
+}
+
+/* 高度為 50vh */
+.heroHeight50 {
+  height: 50vh;
+}
+
+/* 高度為 30vh */
+.heroHeight30 {
+  height: 30vh;
+}
+
+.heroHeight10 {
+  height: 10vh;
 }
 
 .heroContainer svg {
@@ -25,19 +48,27 @@
   z-index: 1;
 }
 
+/* 媒體查詢：裝置寬度在 456px 到 768px 之間 */
 @media (max-width: 768px) and (min-width: 456px) {
-  .heroContainer {
+  .heroHeight50 {
     height: 40vh;
   }
-
+  .heroHeight30 {
+    height: 25vh;
+  }
+  
   .virtualCharacter {
     display: none;
   }
 }
 
+/* 媒體查詢：裝置寬度小於等於 455px */
 @media (max-width: 455px) {
-  .heroContainer {
+  .heroHeight50{
     height: 30vh;
+  }
+  .heroHeight30 {
+    height: 20vh;
   }
   .virtualCharacter {
     display: none;

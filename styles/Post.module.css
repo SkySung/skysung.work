@@ -2,7 +2,7 @@
 
 .container {
     width: 66.6667%; /* 2/3 寬度 */
-    background-color: #fff;
+    background-color: var(--background);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -12,12 +12,10 @@
   .title {
     margin-bottom: 1.5rem;
     font-size: 2rem;
-    color: #333;
   }
   
   .content {
     line-height: 1.6;
-    color: #444;
   }
   
   .content img {

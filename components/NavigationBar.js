@@ -20,7 +20,7 @@ const NavigationBar = () => {
           <li><Link href="/blog">Blog</Link></li>
           <li><Link href="/tic-tac-toe">TicTacToe</Link></li>
           <li><Link href="/newsletter">Newsletter</Link></li>
-          <li><Link href="/about">About</Link></li>
+          <li><Link href="/blog/about">About</Link></li>
         </ul>
       </nav>
       <div className={styles.icons}>
@@ -28,10 +28,10 @@ const NavigationBar = () => {
         <button className={styles.iconButton}><ThemeToggle /></button>
         <button className={styles.iconButton}><IconRss /></button>
         <button
-          className={styles.iconButton}
+          className={`${styles.iconButton} ${styles.menuButton}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <IconMenu />
+          <IconMenu isMenuOpen={isMenuOpen} />
         </button>
       </div>
     </header>

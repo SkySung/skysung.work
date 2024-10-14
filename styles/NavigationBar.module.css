@@ -67,28 +67,56 @@
   height: 24px;
 }
 
+.menuButton {
+  /* 默认情况下显示 */
+}
+
+@media (min-width: 769px) {
+  .menuButton {
+    display: none; /* 大于 768px 时隐藏菜单按钮 */
+  }
+}
+
 @media (max-width: 768px) {
   .nav {
-    display: none;
+    display: none; /* 默认隐藏导航链接 */
     position: absolute;
-    top: 100%; /* 将菜单放在导航栏下方 */
-    left: 0;
-    width: 100%;
-    background-color: var(--header-bg);
+    top: 100%; /* 放在导航栏下方 */
+    right: 5%; /* 靠右对齐，与导航栏右侧对齐 */
+    background-color: var(--background); /* 背景颜色 */
+    border: 1px dashed gray; /* 灰色虚线边框 */
+    border-radius: 8px; /* 圆角 */
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    padding: 0.5rem;
+    margin-top: 0.1rem; /* 与导航栏有一定间距 */
+    z-index: 999; /* 确保菜单在其他元素之上 */
+    transition: background-color 0.5s ease-in-out, color 0.5 ease-in-out; /* 过渡动画 */
   }
 
   .nav.showMenu {
-    display: flex;
+    display: flex; /* 当菜单展开时显示 */
   }
 
   .navList {
     flex-direction: column;
-    border-bottom: 1px solid var(--header-text);
+    width: 100%;
   }
 
   .navList li {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+
+  .navList a {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    color: var(--nav-link-color);
+  }
+
+  .navList a:hover {
+    background-color: var(--nav-link-hover-bg);
+    color: var(--nav-link-hover-color);
+    border-radius: 4px;
   }
 }
