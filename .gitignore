@@ -34,3 +34,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+# User file
+Untracked_Dockerfile
+tree.sh
+tree.txt

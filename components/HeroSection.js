@@ -29,6 +29,7 @@ const HeroSection = () => {
         width={250} 
         height={250}
         className={styles.virtualCharacter}
+        priority={false}
       />
     </div>
   );

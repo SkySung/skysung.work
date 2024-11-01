@@ -9,7 +9,9 @@ import { serialize } from 'next-mdx-remote/serialize';
 // 確保使用默認導出
 export default async function AboutPage() {
     // 使用不同的變量名稱，避免與 path 模塊衝突
-    const mdxFilePath = path.join(process.cwd(), 'app', 'about', 'about.mdx');
+    const mdxFilePath = path.join(process.cwd(), 'app', 'about', 'page.mdx');
+    console.log(process.cwd())
+    console.log(mdxFilePath)
     
     // 檢查文件是否存在
     if (!fs.existsSync(mdxFilePath)) {
