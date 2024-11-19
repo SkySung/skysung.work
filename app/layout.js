@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Sky Sung",
+  title: "Sky Sung's Blog",
   description: "Welcome to my blog",
 };
 
