@@ -1,7 +1,14 @@
 ---
-date:  "2024-11-10"
-title: "Growth mindset 如何養成？"
+title: Growth mindset 如何養成？
+tags: []
+date: 2024-10-24 13:35
+last_edit: 2024-11-19 16:45
+aliases:
+  - "成長心態 Growth mindset "
+linter-yaml-title-alias: "成長心態 Growth mindset "
 ---
+
+
 Source: [Improve your mindset. How to cultivate a Positive, Growth-Oriented mindset.](https://www.youtube.com/watch?v=U2BPitASUh0&t=5506s)
 Podcaster: Andrew Huberman, Jamil Zaki
 

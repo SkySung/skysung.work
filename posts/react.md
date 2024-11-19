@@ -1,3 +1,8 @@
+---
+title: react
+tags: [ReactJS]
+last_edit: 2024-11-19 16:37
+---
 
 [NextJS 中文 doc](https://nextjs.tw/learn/foundations/from-javascript-to-react/updating-ui-with-javascript)
 透過這種方式，開發者會消耗大量時間去寫指令告訴電腦它該 如何（how） 去做事。那能不能只告訴電腦說你想要顯示 什麼（what），然後電腦就可以去理解該 如何（how） 去更新 DOM 呢？
