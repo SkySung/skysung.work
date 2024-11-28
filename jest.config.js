@@ -16,7 +16,7 @@ const customJestConfig = {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     // 處理圖片和其他資源
     '\\.(jpg|jpeg|png|gif|webp|svg)$': '<rootDir>/__mocks__/fileMock.js'
-  },``
+  },
   // 添加測試覆蓋率配置
   collectCoverageFrom: [
     'lib/**/*.{js,jsx,ts,tsx}',
