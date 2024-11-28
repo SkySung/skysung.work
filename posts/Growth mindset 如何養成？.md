@@ -1,11 +1,18 @@
 ---
-date:  "2024-11-10"
-title: "Growth mindset 如何養成？"
+title: Growth mindset 如何養成？
+tags: []
+date: 2024-10-24 13:35
+last_edit: 2024-11-19 16:45
+aliases:
+  - "成長心態 Growth mindset "
+linter-yaml-title-alias: "成長心態 Growth mindset "
 ---
+
+
 Source: [Improve your mindset. How to cultivate a Positive, Growth-Oriented mindset.](https://www.youtube.com/watch?v=U2BPitASUh0&t=5506s)
 Podcaster: Andrew Huberman, Jamil Zaki
 
-來補心得 TL;DR  
+TL;DR  
 + Cynicism（犬儒主義）認為人本質上是自私、貪婪、不誠實的，或者我會說是利益驅動的  
 + 1972 年約有一半的美國人相信大多數人是可以信任的，但到了 2018 年，這個比例下降到只有約三分之一  
 + 雖然「不信任他人」佔了三分之二，但實際上有多個研究顯示這是錯誤的
@@ -32,7 +39,8 @@ Cynicism 雖然中文應該要翻譯為犬儒主義，但是在看完這一期�
 + 犬儒主義會讓人們變得消極被動，不願為自己和社會做出積極的貢獻。 他們可能認為努力是徒勞的，因為最終人們都會被自私和貪婪所驅使。
 
 那為什麼我們不該這樣看待世界呢？
-# 自我實現預言 Self-fulfilling prophecy
+# 自我實現預言
+## Self-fulfilling prophecy
 Zaki教授的書中引用了一段話
 "we are who we pretend to be so we need to be careful who we pretend to be" Kurt Vonnegut
 
@@ -67,7 +75,7 @@ Zaki教授給了一個我很喜歡的有趣的觀點是，為什麼那些負面�
 但是到了現代資訊社會，這個善意的保護信號數量上明顯地過多了，這就是為什麼「好事不出門，壞事傳千里」吧！
 
 ## 不同的環境如何影響我們
-在播客的 **00:39:48 - 00:44:05** 之間。Zaki 教授在這個段落中，講述了巴西東南部兩個漁村的案例研究，說明**環境如何影響人們的犬儒主義程度**。
+這是我最喜歡的段落，在播客的 **00:39:48 - 00:44:05** 之間。Zaki 教授在這個段落中，講述了巴西東南部兩個漁村的案例研究，說明**環境如何影響人們的犬儒主義程度**。
 
 這兩個漁村地理位置相近，社會經濟地位、宗教和文化也相似，但其中一個村莊位於海邊，漁民需要大型船隻和設備才能捕魚，必須合作才能生存；另一個村莊位於湖邊，漁民可以單獨駕駛小型船隻捕魚，彼此之間存在競爭關係。
 
